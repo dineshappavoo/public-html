@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Code that Might be Useful to You</title>
+
+    <link rel="stylesheet" href="dany.org/files/css/styles.css">
+    <style>
+      header { zoom: 1.2; }
+      header h1 { margin-bottom: 5px; }
+      header h1 a { color: #494949; font-weight: bold; }
+      header h3 { margin-top: 20px; margin-bottom: 5px; }
+      header p.view { margin-bottom: 5px; }
+      header p.view small { padding-top: 2px; }
+      header ul {
+        zoom: 0.7;
+        margin-top: 25px;
+      }
+      section p { margin-top: 10px; }
+      section h1 { margin-bottom: 15px; }
+      section h2 { margin-bottom: 10px; }
+      section h2 { margin-bottom: 10px; }
+      footer { bottom: 20px; }
+      footer p { margin-bottom: 5px; }
+      .half-width {
+        float: left;
+        width: 200px;
+        list-style: none;
+        padding: 5px;
+        margin: 7px;
+        margin-bottom: 10px;
+      }
+      .half-width h4 {
+        margin-bottom: 5px;
+      }
+      .half-width ul {
+        padding-left: 0;
+      }
+      .half-width ul li {
+        list-style: inside;
+        font-size: 15px;
+      }
+      .clear-fix {
+        clear: both;
+      }
+    </style>
+    <script src="dany.org/files/track.js" data-site-id="4eb74c9f613f5d3567000004" id="gauges-tracker" async="" type="text/javascript"></script><script src="dany.org/files/scale.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <div class="wrapper">
+        <header>
+            <h1><a href="http://www.utdallas.edu/~dxa132330/"><img src="dany.org/files/logo.jpg" alt="color photo ftl"></a></h1>
+            <!-- <p>Where's Dinesh now?</p> -->
+            
+            <!-- <h3>The Goods</h3> -->
+            <p class="view"><a href="projects.html">Open Source Projects<small>Code that Might be Useful to You</small></a></p>
+            
+            <p class="view"><a href="interpreter.html">Technical Articles<small>Articles that Might be Interesting to You</small></a></p>
+            
+            <!--  <p class="view"><a href="http://www.utdallas.edu/~dxa132330/speaking.html">Talks I've Given<small>On Technologies and Ideas</small></a></p> -->
+            
+            <h3>I'm also on</h3>
+            <p class="view"><a href="https://github.com/dineshappavoo" target="tab">GitHub<small>If you code</small></a>
+            </p>
+            
+            <p class="view"><a href="http://stackoverflow.com/users/3103732/dinesh-appavoo" target="tab">Stack Over Flow<small>If you are an active developer</small></a></p>
+            
+            <p class="view"><a href="http://dineshappavoo.wordpress.com/" target="tab">Word Press<small>If you are a blogger</small></a></p>
+            
+            <p class="view"><a href="https://twitter.com/dineshappavoo" target="tab">Twitter<small>If you tweet</small></a>
+            
+            </p><p class="view"><a href="https://facebook.com/dinesh.appavoo9" target="tab">Facebook<small>If you must</small></a>
+            </p><p class="view"><a href="https://instagram.com/dany1ta" target="tab">Instagram<small>If you take photos constantly</small></a>
+            </p>
+            
+            <p class="view"><a href="http://en.gravatar.com/dineshappavoo" target="tab"><img src="dany.org/files/dineshappavoo.jpg" alt="color photo ftl"><br><small>Through QR reader</small></a>
+            </p>
+
+            
+            <!--    <p class="view"><a href="dany.org/files/resume/dinesh-resume.pdf" target="tab">Resume<small></small></a> </p> -->
+            
+        </header>
+      <section id="main">
+        <h1>A Simple Interpreter Developed in Prolog</h1>
+        <small><B>By Dinesh Appavoo</B>, December 10, 2014</small>
+
+
+
+<hr>
+
+
+
+
+<h2><a href="https://github.com/dineshappavoo/prolog-interpreter">Want To Write An Interpreter?</a></h2>
+
+
+<p>
+
+In this article you will know about how to create a basic interpreter for a language. Here are the three important components required to write an interpreter
+    <ul>
+        <li>Definite Clause Grammar</li>
+        <li>Parse Tree</li>
+        <li>Denotational Semantics</li>
+    </ul>
+The following grammar [Right Recursive] is used to develop an interpreter. This grammar parses
+    <ul>
+        <li>variable declaration and initilization</li>
+        <li>full if condition</li>
+        <li>while loop</li>
+    </ul>
+
+    <script src="https://gist.github.com/dineshappavoo/d14c41f5ef60743cca6e.js"></script>
+
+Based on the grammar the parse tree has to be generated. It is an ordered, rooted tree that represents the syntactic structure of a string according to some context-free grammar. <br>Parse trees are usually constructed according to one of two competing relations, either in terms of the constituency relation of constituency grammars (= phrase structure grammars) or in terms of the dependency relation of dependency grammars.
+<br><br>Prolog code block to generate the parse tree <br> <br>
+<script src="https://gist.github.com/dineshappavoo/e43ec2d08b435a5fa91d.js"></script>
+
+Denotational semantics is an approach of formalizing the meanings of programming languages by constructing mathematical objects (called denotations) that describe the meanings of expressions from the languages.
+Mathmatical objects are constructed from the parse tree which will be given to the semantic producer as an input.
+
+<br><br>Code block for the denotational semantics<br><br>
+<script src="https://gist.github.com/dineshappavoo/d0389aef0ac5f828b32e.js"></script>
+
+To test the interpreter, you can simply run the main method in the denotaional semantics code block. It will internally generate the parse tree for the input code and do the evaluation. This interpreter will allow the program to take two inputs x and y and do the operations on x and y which can invlove z, u and v.
+
+</p>
+
+
+<hr>
+
+
+      </section>
+      <footer>
+        <!-- <p>This is the site of Corey Donohoe</p> -->
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4eb74c9f613f5d3567000004');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+    <script src="dany.org/files/jquery.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  
+
+</body></html>
